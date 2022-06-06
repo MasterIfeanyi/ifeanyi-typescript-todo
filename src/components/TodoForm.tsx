@@ -66,13 +66,13 @@ const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
                             id="name"
                             placeholder="task"
                             value={name}
-                            className="form-control"
+                            className="form-control search-bar"
                             onChange={handleChange}
                             autoComplete="off"
                         />
                     </div>
                     <div className='mt-2 text-center'>
-                        <button className="btn btn-danger">Submit</button>
+                        <button className="btn btn-danger form-button">Submit</button>
                     </div>
                 </form>
             </div>
