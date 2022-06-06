@@ -57,9 +57,9 @@ const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
             </div>
         </div>
             
-        <div className="row mt-2">
-            <div className="col-md-7">
-                <form action="" className="row form d-flex justify-content-center align-items-center" onSubmit={onSubmit}>
+        <div className="row d-flex justify-content-center align-items-center">
+            <div className="col-md-7 my-2">
+                <form action="" className="row" onSubmit={onSubmit}>
                     <div className="form-group col-12">
                         <input
                             type="text"
