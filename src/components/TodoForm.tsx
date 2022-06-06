@@ -49,35 +49,28 @@ const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
         setAndSaveItems(newItems);
         setFormData(defaultFormData);
     }
-  return (
-    <>
-        <div className="row">
-            <div className="col-12 mt-2">
-                <h3>To-do Application</h3>
-            </div>
+  return (           
+    <div className="row d-flex justify-content-center align-items-center">
+        <div className="col-md-7 my-2">
+            <form action="" className="row" onSubmit={onSubmit}>
+                <div className="form-group col-12">
+                    <label htmlFor="task" className="form-label">Enter A Chore</label>
+                    <input
+                        type="text"
+                        id="task"
+                        placeholder="task"
+                        value={name}
+                        className="form-control search-bar"
+                        onChange={handleChange}
+                        autoComplete="off"
+                    />
+                </div>
+                <div className='mt-2 text-center'>
+                    <button className="btn btn-danger form-button">Submit</button>
+                </div>
+            </form>
         </div>
-            
-        <div className="row d-flex justify-content-center align-items-center">
-            <div className="col-md-7 my-2">
-                <form action="" className="row" onSubmit={onSubmit}>
-                    <div className="form-group col-12">
-                        <input
-                            type="text"
-                            id="name"
-                            placeholder="task"
-                            value={name}
-                            className="form-control search-bar"
-                            onChange={handleChange}
-                            autoComplete="off"
-                        />
-                    </div>
-                    <div className='mt-2 text-center'>
-                        <button className="btn btn-danger form-button">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </>
+    </div>
   )
 }
 
