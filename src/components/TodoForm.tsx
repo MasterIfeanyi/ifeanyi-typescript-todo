@@ -51,27 +51,31 @@ const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
     }
   return (
     <>
-        <div className="row mt-2">
-            <h3>To-do Application</h3>
+        <div className="row">
+            <div className="col-12 mt-2">
+                <h3>To-do Application</h3>
+            </div>
         </div>
             
         <div className="row mt-2">
-            <form action="" className="form" onSubmit={onSubmit}>
-                <div className="form-group">
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="task"
-                        value={name}
-                        className="form-control"
-                        onChange={handleChange}
-                        autoComplete="off"
-                    />
-                </div>
-                <div className='form-group mt-2'>
-                    <button className="btn btn-danger">Submit</button>
-                </div>
-            </form>
+            <div className="col-md-7">
+                <form action="" className="row form" onSubmit={onSubmit}>
+                    <div className="form-group col-12">
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="task"
+                            value={name}
+                            className="form-control"
+                            onChange={handleChange}
+                            autoComplete="off"
+                        />
+                    </div>
+                    <div className='mt-2 text-center'>
+                        <button className="btn btn-danger">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </>
   )
