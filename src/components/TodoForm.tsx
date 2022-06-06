@@ -53,8 +53,8 @@ const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
     <div className="row d-flex justify-content-center align-items-center">
         <div className="col-md-7 my-2">
             <form action="" className="row" onSubmit={onSubmit}>
-                <div className="form-group col-12">
-                    <label htmlFor="task" className="form-label">Enter A Chore</label>
+                <div className="form-group col-12 set-text">
+                    <label htmlFor="task" className="form-label h5">Enter A Chore</label>
                     <input
                         type="text"
                         id="task"

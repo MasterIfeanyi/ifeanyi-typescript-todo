@@ -114,10 +114,14 @@ input.search-bar:focus{
   box-shadow: none;
 }
 
-.form-button{
+.form-button {
   color: black;
   cursor: pointer;
   border-radius: 0.25rem;
   box-shadow: 2px 2px 5px #000;
   padding: 0.25rem;
+}
+
+.set-text {
+  text-align: left;
 }
