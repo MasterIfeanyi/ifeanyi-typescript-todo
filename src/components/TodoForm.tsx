@@ -4,7 +4,7 @@ import { ItemsProps } from "../interfaces/Items"
 
 interface defaultFormType{
     id?: number,
-    name: string
+    task: string
 }
 
 interface TodoFormProps {
@@ -13,7 +13,7 @@ interface TodoFormProps {
 }
 
 const defaultFormData: defaultFormType = {
-    name: ""
+    task: ""
 }
 
 const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
@@ -26,7 +26,7 @@ const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
 
     const [formData, setFormData] = useState<defaultFormType>(defaultFormData)
 
-    const {name} = formData
+    const {task} = formData
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ): void => {
         setFormData((prevState) => (
@@ -39,12 +39,12 @@ const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
 
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (!name) {
+        if (!task) {
             return
         }
         console.log(formData);
         const id = items.length ? items[items.length - 1].id + 1 : 1;
-        const data = {name, id, checked: false}
+        const data = {task, id, checked: false}
         const newItems = [...items, data];
         setAndSaveItems(newItems);
         setFormData(defaultFormData);
@@ -59,7 +59,7 @@ const TodoForm: React.FC<TodoFormProps> = ({items, setItems}) => {
                         type="text"
                         id="task"
                         placeholder="task"
-                        value={name}
+                        value={task}
                         className="form-control search-bar"
                         onChange={handleChange}
                         autoComplete="off"

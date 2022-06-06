@@ -13,7 +13,7 @@ const TodoItem: React.FC<TodoItemProp> = ({ item, handleDelete, handleCheck }) =
       <input type="checkbox" onChange={() => { handleCheck(item.id); handleDelete(item.id) }} />
       <label htmlFor=""
         onClick={() => handleDelete(item.id)}>
-        {item.name}
+        {item.task}
       </label>
     </div>
   )
