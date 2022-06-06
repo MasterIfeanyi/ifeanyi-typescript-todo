@@ -27,30 +27,28 @@ const TodoList: React.FC<TodoListProps> = ({ items, setItems }) => {
 
     const renderList = (): JSX.Element[] => {
         return items.map(item => {
-            return (
-                <TodoItem key={item.id} item={item}
-                    handleDelete={handleDelete}
-                    handleCheck={handleCheck}
-                />
-            )
-        }
-    )
+                return (
+                    <TodoItem key={item.id} item={item}
+                        handleDelete={handleDelete}
+                        handleCheck={handleCheck}
+                    />
+                )
+            }
+        )
     }
 
 
-  return (
-    <div className="container mt-2 mb-2">
+    return (
         <div className="row">
-            <main>
+            <div className="col-12 mt-2 mb-2">
                 {
                     items.length ? renderList() : (
                         <p style={{ color: "red" }}>List is empty</p>
                     )
                 }
-            </main>
-        </div>
-    </div>
-  )
+            </div>
+        </div>    
+    )
 }
 
 export default TodoList

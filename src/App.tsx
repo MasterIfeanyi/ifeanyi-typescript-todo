@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
+import WelcomeNote from './components/WelcomeNote';
 import { ItemsProps } from './interfaces/Items';
 
 
@@ -26,14 +27,17 @@ function App() {
     <div className="App">
       <Header />
       <section className="section">
-        <TodoForm
-          items={items}
-          setItems={setItems}
-        />
-        <TodoList
-          items={items}
-          setItems={setItems}
-        />
+        <div className="container">
+          <WelcomeNote />
+          <TodoForm
+            items={items}
+            setItems={setItems}
+          />
+          <TodoList
+            items={items}
+            setItems={setItems}
+          />
+        </div>
       </section>
       <Footer />
     </div>
