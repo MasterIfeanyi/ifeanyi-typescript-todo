@@ -1,8 +1,6 @@
-# Simple To-do Application
+# Description
 
-This project was bootstrapped with Typescript.
-
-## Check out the website,
+This project was bootstrapped with typescript and create-react-app. `npx create-react-app --template typescript`
 
 #### click the link below
 

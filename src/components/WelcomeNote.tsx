@@ -2,13 +2,11 @@ import React from 'react'
 
 const WelcomeNote = () => {
   return (
-    <div className="container">
-        <div className="row">
-            <div className="col-12 my-2">
-                <p className="text h5">This project was created using react-typescript</p>
-            </div>
-        </div>
-    </div>
+    <div className="row">
+      <div className="col-12 my-2 text-center">
+        <p className="intro-text">This project was created using react-typescript</p>
+      </div>
+    </div>   
   )
 }
 
