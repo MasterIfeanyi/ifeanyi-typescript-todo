@@ -6,7 +6,7 @@ This is a single page react app created with typescript that has CRUD functional
 
 ## React
 
-This project was bootstrapped with typescript and create-react-app. `npx create-react-app --template typescript`
+This project was bootstrapped with typescript and create-react-app. `npx create-react-app . --template typescript`
 
 
 ## Project Set-up
